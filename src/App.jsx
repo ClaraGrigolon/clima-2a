@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { CloudMoonRain, MapPinned } from 'lucide-react';
+import { CloudMoonRain, MapPinned, Thermometer, Droplets, Wind} from 'lucide-react';
 
 
 function App() {
@@ -35,8 +35,55 @@ function App() {
             </div>
 
             {/* Temperatura Principal */}
-            
-          </div>
+            <div className="temperatura-box">
+              <div className="temperatura-valor">
+                28°C
+              </div>
+              <div className="sens-termica">
+                31°C
+              </div>
+            </div>
+
+            {/* Informções Adicionais */}
+            <div className="detalhes-box">
+              <div className="detal-item">
+                <div className="detal-icone">
+                  <Thermometer />
+                </div>
+                <p className="detal-desc">
+                  Min/Max
+                </p>
+                <p className="detal-valor">
+                  25°C/28°C
+                </p>
+              </div>
+
+              <div className="detal-item">
+                <div className="detal-icone">
+                  <Droplets />
+                </div>
+                <p className="detal-desc">
+                  Umidade
+                </p>
+                <p className="detal-valor">
+                  20%
+                </p>
+              </div>
+
+              <div className="detal-item">
+                <div className="detal-icone">
+                  <Wind />
+                </div>
+                <p className="detal-desc">
+                  Vento
+                </p>
+                <p className="detal-valor">
+                  12 km/h
+                </p>
+              </div>
+            </div>
+
+          </div>{/* fecha o resultado */}
 
         </div>
       </div>
